@@ -3,8 +3,6 @@
 >2. 每个对象都有一个ISA指针和superclass指针，实例对象的ISA指针指向类对象，类对象的ISA指针指向元类对象，根元类对象的ISA指针指向自己。类对象的superclass指针指向父类对象，元类对象的superclass指针指向父元类对象，根元类对象的ISA指针指向根类对象。
 >3. 类对象中包含了ISA指针，superclass指针，属性数组，协议数组，属性方法缓存数组，属性方法数组等
 >4. 元类对象中包含了ISA指针，superclass指针，属性数组，协议数组，类方法缓存数组，类方法数组等
-
-
 2. 说说对copy与mutableCopy的理解？
 >1. 对于不可变对象，copy都是浅复制，即指针复制。mutableCopy 都是Alloc一个新对象返回。
 >2. 对于可变对象，copy和mutableCopy都是Alloc新对象返回。
@@ -16,7 +14,6 @@
 >3. delegate 是代理，就是我不想做的事情交给别人做。比如狗需要吃饭，就通过delegate通知主人，主人就会给他做饭、盛饭、倒水，这些操作，这些狗都不需要关心，只需要调用delegate（代理人）就可以了，由其他类完成所需要的操作。所以delegate是一对一关系。
 >4. block是delegate的另一种形式，是函数式编程的一种形式。使用场景跟delegate一样，相比delegate更灵活，而且代理的实现更直观。
 >5. KVO一般的使用场景是数据，需求是数据变化，比如股票价格变化，我们一般使用KVO（观察者模式）。delegate一般的使用场景是行为，需求是需要别人帮我做一件事情，比如买卖股票，我们一般使用delegate。Notification一般是进行全局通知，比如利好消息一出，通知大家去买入。delegate是强关联，就是委托和代理双方互相知道，你委托别人买股票你就需要知道经纪人，经纪人也不要知道自己的顾客。Notification是弱关联，利好消息发出，你不需要知道是谁发的也可以做出相应的反应，同理发消息的人也不需要知道接收的人也可以正常发出消息。
-
 4. 讲一下对MVC、MVVM、MVP的理解？
 >1. MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。
 特点：所有方式都是单向通信
@@ -51,9 +48,9 @@
 >当objc_msgSend方法调用找不到响应的函数名称时就会进行消息转发。
 >	主要分为3步:
 >
->1. 动态方法解析 调用方法+(BOOL)resolveInstanceMethod:(SEL)sel(实例方法动态解析)和+ (BOOL)resolveClassMethod:(SEL)sel(类方法动态解析)。
->2. 备援接收者 调用方法 - (id)forwardingTargetForSelector:(SEL)aSelector
->3. 完全转发 调用方法- (void)forwardInvocation:(NSInvocation *)anInvocation和- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+>1. 动态方法解析调用方法+(BOOL)resolveInstanceMethod:(SEL)sel(实例方法动态解析)和+ (BOOL)resolveClassMethod:(SEL)sel(类方法动态解析)。
+>2. 备援接收者调用方法 - (id)forwardingTargetForSelector:(SEL)aSelector
+>3. 完全转发调用方法- (void)forwardInvocation:(NSInvocation *)anInvocation和- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 	
 9. iOS中常用的线程锁有哪些，分别具有哪些特点？
 >1. @synchronized 关键字加锁 互斥锁，性能较差不推荐使用
