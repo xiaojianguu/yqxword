@@ -1,10 +1,10 @@
 # JSON风格指南 #
 
-版本：[1.0]()
+版本：[1.0](https://gzl.gitbook.io/reminder/san-bian-cheng-shou-ce/jsonstyleguide)
 
 ## 简介 ##
 
-该风格指南是对在Google创建JSON APIs而提供的指导性准则和建议。总体来讲，JSON APIs应遵循JSON.org上的规范。这份风格指南澄清和标准化了特定情况，从而使Google的JSON APIs有一种标准的外观和感觉。这些指南适用于基于RPC和基于REST风格的API的JSON请求和响应。
+该风格指南是对在广之旅创建JSON APIs而提供的指导性准则和建议。总体来讲，JSON APIs应遵循JSON.org上的规范。这份风格指南澄清和标准化了特定情况，从而使广之旅的JSON APIs有一种标准的外观和感觉。这些指南适用于基于RPC和基于REST风格的API的JSON请求和响应。
 
 ## 定义 ##
 为了更好地实现这份风格指南的目的，下面几项需要说明：
