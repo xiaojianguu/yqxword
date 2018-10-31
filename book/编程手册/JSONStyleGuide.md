@@ -184,6 +184,17 @@ JSON.org上的标准准确地说明了哪些类型的数据可以作为属性值
 	  "moreData": {},         // object
 	  "things": []            // array
 	}
+### 不需要的属性 ###
+如果一个属相对于服务方有用,但对于调用方无用。可以考虑从JSON中去掉该属性
+
+解决方案
+
+|Json库|具体使用|
+|----|----|
+|Jackson|字段注解@JsonIgnore|
+|FastJson|字段注解@JSONField(serialize = false)|
+
+	
 	
 ### 空或Null 属性值 ###
 **考虑移除空或null值**
@@ -201,6 +212,14 @@ JSON.org上的标准准确地说明了哪些类型的数据可以作为属性值
 	  // "currentlyPlaying" 是null的时候可被移除
 	  // "currentlyPlaying": null
 	}
+	
+解决方案
+
+|Json库|具体使用|
+|----|----|
+|Jackson|实体类添加注解 @JsonInclude(Include.NON_NULL)|
+|FastJson|默认不序列化null值|
+
 	
 ### 枚举值 ###
 **枚举值应当以字符串的形式呈现**
