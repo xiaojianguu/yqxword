@@ -1,9 +1,9 @@
-## 编程手册
-
-本章节旨在提供一种代码编写规范
-
-
 # JSON风格指南 Wiki #
+
+版本：[1.0](https://gzl.gitbook.io/reminder/san-bian-cheng-shou-ce/jsonstyleguide)
+
+
+
 ### 更新日志
 
 #### 1.1版本

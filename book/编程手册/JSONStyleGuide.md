@@ -1,6 +1,6 @@
 # JSON风格指南 #
 
-版本：[1.0](https://gzl.gitbook.io/reminder/san-bian-cheng-shou-ce/jsonstyleguide)
+版本：[1.1](https://gzl.gitbook.io/reminder/san-bian-cheng-shou-ce/jsonstyleguide)
 
 ## 简介 ##
 
@@ -367,7 +367,7 @@ JSON对象有一些顶级属性，然后是*data*对象或*error*对象，这两
 	  }
 	}
 
-*现有做法:*
+*App现有做法:*
 	
 	{
 	  "resultCode": "00100000"
@@ -406,7 +406,7 @@ JSON对象有一些顶级属性，然后是*data*对象或*error*对象，这两
 	  }
 	}
 
-*现有做法:*
+*App现有做法:*
 	
 	{
 	  "resultCode": "00100001"
@@ -439,7 +439,7 @@ JSON对象有一些顶级属性，然后是*data*对象或*error*对象，这两
 
 ### data.pageIndex ###
 
-*现有做法* data.pageNo
+*App现有做法* data.pageNo
 
 	属性值类型: 整数(integer)
 	父节点: data
@@ -453,7 +453,7 @@ JSON对象有一些顶级属性，然后是*data*对象或*error*对象，这两
 结果集中一页最多放的结果数目
 
 ### data.totalItems ###
-*现有做法* data.totalElements
+*App现有做法* data.totalElements
 
 	属性值类型: 整数(integer)
 	父节点: data
@@ -616,12 +616,15 @@ JSON对象的*error*属性应包含以下属性。
 
 | 名称 | 描述 |
 |---- |----|
-|字段相同含义值一致性| 如产品类型、订单类型|
-|JSON字段|多余不需要的字段不返回(@JsonIgnore) |
+|字段相同含义值一致性| 如产品类型、订单类型、联系人|
+|JSON字段|多余不需要的字段不返回 |
 |JSON字段|有意义的字段名 |
 |集合值|以JsonArray 方式返回|
 |标签| 尽量不要使用标签文本(富文本)|
 |要求有顺序的Map| 用数组传递|
+|默认值|数组默认为空数组、字符串默认为空串|
+|GET|安全的查询请求|
+|POST|修改操作|
 
 
 -_EOF_-
