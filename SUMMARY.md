@@ -11,6 +11,8 @@
   	* [android面试题答案](/book/App面试题/android面试题答案.md)
   	* [ios面试题](/book/App面试题/ios面试题.md)
   	* [ios面试题答案](/book/App面试题/ios面试题答案.md)
+  * [二、广之旅App招聘要求](book/App招聘要求/readme.md)
+    * [android招聘要求](book/App招聘要求/android招聘要求.md)
   * [三、编程手册](/book/编程手册/README.md)
   	* [Json风格指南](/book/编程手册/JSONStyleGuide.md) 
   * [四、设备信息](/book/设备/README.md)
